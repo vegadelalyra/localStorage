@@ -1,0 +1,83 @@
+:root {
+    --blue: rgb(82, 157, 255);
+}
+
+html {
+    min-height: 50%;
+}
+
+body {
+    margin: 10%;
+    padding: 0;
+    background-color: var(--blue);
+    min-height: 50%;
+    padding-bottom: 5rem;
+    font-size: 1.5rem;
+}
+
+#sura {
+    color: white;
+}
+
+.label {
+    color: white;
+}
+
+#btnBuscar {
+    border-radius: 1rem;
+    border: none;
+    background-color: rgb(151, 181, 226);
+    padding: 0.5rem;
+}
+
+#inputBuscador {
+    border-radius: 0.3rem;
+}
+
+#link:focus-visible {
+    outline: -webkit-focus-ring-color 0px;
+}
+
+i {
+    cursor: pointer;
+    padding-left: 3vh;
+}
+
+i:hover {
+    color: red;
+}
+
+/* RESPONSIVE DESIGN  */
+@media screen and (max-width: 800px) {
+    body {
+        color: whitesmoke;
+        margin: 0;
+        margin-top: 6vh;
+    }
+
+    /* [SECCION BUSCAR POR NOMBRE] */
+    .buscar { 
+        display: flex;
+        flex-flow: column wrap;
+        padding: 3vh;
+        padding-bottom: 0;
+        gap: 1vh;
+    }
+    .label {
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+    }
+    #btnBuscar {
+        margin: 0;
+        margin-top: 2vh;
+    }
+    .card {
+        background-color: var(--blue);
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+}
