@@ -117,7 +117,7 @@ i:hover {
         background-color: rgb(7, 95, 155);
         position: sticky;
         z-index: 0;
-        top: 10vh;
+        top: 20vh;
         padding: 1.25rem;
     }
 }
