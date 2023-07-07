@@ -13,6 +13,10 @@ body {
     min-height: 50%;
     padding-bottom: 5rem;
     font-size: 1.5rem;
+} 
+
+h1 {
+    cursor: pointer;
 }
 
 #sura {
@@ -53,6 +57,7 @@ i:hover {
         color: whitesmoke;
         margin: 0;
         margin-top: 6vh;
+        z-index: -1;
     }
 
     /* [SECCION BUSCAR POR NOMBRE] */
@@ -76,6 +81,45 @@ i:hover {
         background-color: var(--blue);
     }
 
+    /* [SECCION AGENDAR CITA] */
+    .card-body {
+        padding: 0;
+        margin: 0;
+    }
+    .card-body h1 {
+        padding: 1.25rem;
+        background-color: rgb(7, 95, 155);
+    }
+    #agregarCitas {
+        background-color: var(--blue);
+        position: sticky;
+        z-index: 1;
+        top: 0;
+    }
+    form {
+        padding: 0 1.5rem 0.5rem 1.5rem;
+        display: flex;
+        flex-flow: column wrap;
+    }
+    form .mb-4 {
+        width: 100%;
+        padding: 0 1vh;
+    }
+    form .mt-3 {
+        display: flex;
+        flex-flow: row;
+        align-items: flex-start;
+        width: 50%;
+    }
+
+    /* [SECCION AGENDA] */
+    #listar h1 {
+        background-color: rgb(7, 95, 155);
+        position: sticky;
+        z-index: 0;
+        top: 10vh;
+        padding: 1.25rem;
+    }
 }
 
 @media screen and (min-width: 1200px) {

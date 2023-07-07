@@ -76,18 +76,27 @@ function deleteDate(tableRow, index) {
   localStorage.setItem('CITAS', JSON.stringify(citas))
 }
 
-// Trying to toggle [AGREGAR CITAS] section
-const [ agregarCitas, agenda ] = getEl(['.card-body h1', '#link'])
+// Trying to toggle [AGREGAR CITAS && AGENDA] sections
+const [ agregarCitas, agenda ] = getEl(['.card-body h1', '#listar h1'])
 
-agregarCitas.onclick = () => toggleEl('form')
-agenda.onclick = () => toggleEl('table')
+agregarCitas.onclick = e => toggleEl('form', agregarCitas)
+agenda.onclick = e => toggleEl('table', agenda)
 
-function toggleEl(toggeable) {
+function toggleEl(toggeable, parent) {
+  if (window.innerWidth > 800) return   
+
   const htmlEl = document.querySelector(toggeable)
   const toggled = htmlEl.style.display == 'none'
-  if (!toggled) return htmlEl.style.display = 'none'
-  
+  const focus = 'rgb(7, 95, 155);'
+  const blur = 'rgb(82, 157, 255);'
+
+  if (!toggled) {
+    parent.style = `background-color: ${blur}`
+    return htmlEl.style.display = 'none'
+  }
+
   window.location.href = '#toggle'
+  parent.style = `background-color: ${focus}`
   htmlEl.style.display = 'block'
 }
 
